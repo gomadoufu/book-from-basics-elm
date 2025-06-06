@@ -1,9 +1,50 @@
 module Main exposing (..)
 
-import Html exposing (Html, a, text)
-import Html.Attributes exposing (href)
+import Browser
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 
 
-main : Html msg
+main : Program () Model Msg
 main =
-    a [ href "https://elm-lang.org" ] [ text "Elm" ]
+    Browser.sandbox
+        { init = init
+        , update = update
+        , view = view
+        }
+
+
+
+-- MODEL
+
+
+type alias Model =
+    {}
+
+
+init : Model
+init =
+    {}
+
+
+
+-- UPDATE
+
+
+type Msg
+    = Msg
+
+
+update : Msg -> Model -> Model
+update msg model =
+    model
+
+
+
+-- VIEW
+
+
+view : Model -> Html Msg
+view model =
+    text ""
